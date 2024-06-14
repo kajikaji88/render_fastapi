@@ -51,5 +51,5 @@ def index():
     return HTMLResponse(content=html_content, status_code=200)
 
     @app.post("/present")
-async def new_naming(present):
+async def new_naming(present: str):
     return {"response": f"サーバです。あけましておめでとう！ {present}おめでとう。お年玉だよ。"}
