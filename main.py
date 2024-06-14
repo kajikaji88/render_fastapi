@@ -15,7 +15,7 @@ async def root():
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
 
-    @app.get("/omikuji")
+@app.get("/omikuji")
 def omikuji():
     omikuji_list = [
         "大吉",
@@ -30,4 +30,4 @@ def omikuji():
         "大凶"
     ]
 
-return {"result": random.choice(omikuji_list)}
+    return omikuji_list[random.randrange(10)]
